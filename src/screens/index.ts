@@ -1,0 +1,3 @@
+export {default as HomeView} from './home/HomeView';
+export {default as SwapView} from './swap/SwapView';
+export {default as ConfirmarionView} from './transactions/confirmation/ConfirmarionView';
