@@ -5,11 +5,12 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {HomeView, SwapView} from '../screens';
+import {ConfirmationView, HomeView, SwapView} from '../screens';
 
 export type RootStackParamList = {
   Home: {navigation: any};
   SwapView: {name: string};
+  Confirmation: {name: String};
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -20,13 +21,30 @@ function AppNavigation() {
       <Stack.Navigator>
         <Stack.Screen
           name="Home"
-          options={{headerShown: false}}
+          options={{headerShown: true, title: '', headerTransparent: true}}
           component={HomeView}
         />
         <Stack.Screen
           name="SwapView"
-          options={{headerShown: false}}
+          options={{
+            headerShown: true,
+            headerTitle: 'Swap de criptomonedas',
+            headerTransparent: true,
+            headerTitleAlign: 'center',
+            headerBlurEffect: 'light',
+          }}
           component={SwapView}
+        />
+        <Stack.Screen
+          name="Confirmation"
+          options={{
+            headerShown: true,
+            headerTitle: 'Confirmación',
+            headerTransparent: true,
+            headerTitleAlign: 'center',
+            headerBlurEffect: 'light',
+          }}
+          component={ConfirmationView}
         />
       </Stack.Navigator>
     </NavigationContainer>

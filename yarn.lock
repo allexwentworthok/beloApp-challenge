@@ -1443,9 +1443,10 @@
   resolved "https://registry.yarnpkg.com/@rescript/react/-/react-0.10.3.tgz#a2a8bed6b017940ec26c2154764b350f50348889"
   integrity sha512-Lf9rzrR3bQPKJjOK3PBRa/B3xrJ7CqQ1HYr9VHPVxJidarIJJFZBhj0Dg1uZURX+Wg/xiP0PHFxXmdj2bK8Vxw==
 
-"@rneui/base-edge@github:react-native-elements/react-native-elements#base":
-  version "4.0.0-rc.3"
-  resolved "https://codeload.github.com/react-native-elements/react-native-elements/tar.gz/fd2be62c361142b88925b7df49db0116f78337ee"
+"@rneui/base@^4.0.0-rc.4":
+  version "4.0.0-rc.4"
+  resolved "https://registry.yarnpkg.com/@rneui/base/-/base-4.0.0-rc.4.tgz#5dcf2c7002d729234690688f4d334ac2e63c3872"
+  integrity sha512-X2L4UJkrMrhd35Jqdk5zf8zHXOFBu6jOo76lUlHxoiu12S/3Q0XKsB6nJHRonG3IiAE0epCux7Px98K2n66bPA==
   dependencies:
     "@types/react-native-vector-icons" "^6.4.10"
     color "^3.2.1"
@@ -1454,23 +1455,10 @@
     react-native-ratings "^8.1.0"
     react-native-size-matters "^0.4.0"
 
-"@rneui/base@^0.0.0-edge.2":
-  version "0.0.0-edge.2"
-  resolved "https://registry.yarnpkg.com/@rneui/base/-/base-0.0.0-edge.2.tgz#ff251ac010c71e9e5b917273fa69401e16b0a9ad"
-  integrity sha512-MFyiK0Kz23v5mwOUotZdD8cudREa0t9lFwb2+6MyyG1SN2I8CUyqqsZBBwUMInXbspeOtJGtWOPv61TM/2esFQ==
-  dependencies:
-    "@rneui/base-edge" "github:react-native-elements/react-native-elements#base"
-
-"@rneui/themed-edge@github:react-native-elements/react-native-elements#themed":
-  version "4.0.0-rc.3"
-  resolved "https://codeload.github.com/react-native-elements/react-native-elements/tar.gz/d69db6a183bfaf2253e42d586f2d26432a8a4ad8"
-
-"@rneui/themed@^0.0.0-edge.2":
-  version "0.0.0-edge.2"
-  resolved "https://registry.yarnpkg.com/@rneui/themed/-/themed-0.0.0-edge.2.tgz#a9cdc4501e5d046f7c6f886a8f6e0824af0f731d"
-  integrity sha512-MnsZarge+2V1//ov9jCAxkKzjS5RejZf/eRpE9tVOmvDZeEO1Q/9LIV00ZJxEHnjJHpozs5UvBkwb8KAwFL/0Q==
-  dependencies:
-    "@rneui/themed-edge" "github:react-native-elements/react-native-elements#themed"
+"@rneui/themed@^4.0.0-rc.4":
+  version "4.0.0-rc.4"
+  resolved "https://registry.yarnpkg.com/@rneui/themed/-/themed-4.0.0-rc.4.tgz#8997297036658a5c752e255355d42564bf16c6e9"
+  integrity sha512-1td9Fu3lyOYueowQxnnO/8WCX9eLU3jjIiLsNNVAdI6kDyMpGegP/2h2hj8y3tjdTgKrAiL46m8iEhJFncA9AA==
 
 "@sideway/address@^4.1.3":
   version "4.1.4"
@@ -6454,7 +6442,7 @@ react-native-svg@^12.1.0, react-native-svg@^12.3.0:
     css-select "^4.2.1"
     css-tree "^1.0.0-alpha.39"
 
-react-native-vector-icons@^9.0.0:
+react-native-vector-icons@^9.1.0:
   version "9.1.0"
   resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-9.1.0.tgz#52eaa205f5954d567b7048eb93d58ac854a2c59e"
   integrity sha512-2AHZ/h9d/+rC0odz+OwbGNlc1Lik/pHhSixn4HfC8RtQ8CxfSBZ6gg7bTLcZhdSvZN+ZEGi30Fj+ZnOSQy+smg==

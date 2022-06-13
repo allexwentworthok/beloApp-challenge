@@ -1,6 +1,7 @@
 import React, {FunctionComponent} from 'react';
 import {StyleSheet} from 'react-native';
 import {Button} from 'react-native-paper';
+import {LIGTH_THEME} from '../../theme/colors';
 
 interface Props {
   action: any;
@@ -19,6 +20,7 @@ const styles = StyleSheet.create({
   roudedButton: {
     borderRadius: 100,
     marginVertical: 12,
+    backgroundColor: LIGTH_THEME.secondary,
   },
 });
 

@@ -1,5 +1,6 @@
 export const LIGTH_THEME = {
   primary: '#fff',
-  secondary: '#a3f9a2',
+  secondary: '#580BE4',
   shadowCards: '#D8D8D8',
+  titleInput: '#580BE4',
 };

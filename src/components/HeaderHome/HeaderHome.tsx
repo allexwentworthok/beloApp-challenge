@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {Dimensions, StyleSheet, View} from 'react-native';
 import {Text} from 'react-native-paper';
 import RoundedButton from './RoundedButton';
 
@@ -31,7 +31,7 @@ export default HeaderHome;
 
 const HeaderHomeStyles = StyleSheet.create({
   container: {
-    marginTop: 40,
+    marginTop: Dimensions.get('screen').height / 8,
   },
   textTitle: {
     fontSize: 32,
