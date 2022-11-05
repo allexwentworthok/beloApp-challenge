@@ -3,11 +3,7 @@ import {Dimensions, StyleSheet, View} from 'react-native';
 import {Text} from 'react-native-paper';
 import RoundedButton from './RoundedButton';
 
-const routerButtons = [
-  {title: 'Comprar', route: 'SwapView', key: 2},
-  {title: 'Ingresar', route: 'SwapView', key: 1},
-  {title: 'Retirar', route: 'SwapView', key: 3},
-];
+const routerButtons = [{title: 'Intercambiar', route: 'SwapView', key: 2}];
 
 const HeaderHome = ({navigation}: {navigation: any}) => {
   return (
@@ -32,6 +28,9 @@ export default HeaderHome;
 const HeaderHomeStyles = StyleSheet.create({
   container: {
     marginTop: Dimensions.get('screen').height / 8,
+    backgroundColor: 'white',
+    padding: 12,
+    borderRadius: 18,
   },
   textTitle: {
     fontSize: 32,
@@ -44,6 +43,5 @@ const HeaderHomeStyles = StyleSheet.create({
   buttons: {
     marginVertical: 18,
     justifyContent: 'space-between',
-    flexDirection: 'row',
   },
 });

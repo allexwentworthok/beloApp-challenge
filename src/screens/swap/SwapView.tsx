@@ -4,11 +4,9 @@ import BaseInputSwap from '../../components/BaseInputSwap/BaseInput';
 import BaseLayout from '../../components/BaseLayout/BaseLayout';
 import SwapCard from '../../components/Card/SwapCard';
 import RoundedButton from '../../components/HeaderHome/RoundedButton';
-interface Props {
-  navigation: any;
-}
+import {PropsNavigation} from '../../interfaces/interfaces';
 
-const SwapView: FunctionComponent<Props> = ({navigation}) => {
+const SwapView: FunctionComponent<PropsNavigation> = ({navigation}) => {
   return (
     <BaseLayout>
       <KeyboardAvoidingView>

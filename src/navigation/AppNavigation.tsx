@@ -5,12 +5,13 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {ConfirmationView, HomeView, SwapView} from '../screens';
+import {ConfirmationView, HomeView, SwapView, FeedbackView} from '../screens';
 
 export type RootStackParamList = {
   Home: {navigation: any};
   SwapView: {name: string};
   Confirmation: {name: String};
+  FeedbackView: {name: String};
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -21,7 +22,10 @@ function AppNavigation() {
       <Stack.Navigator>
         <Stack.Screen
           name="Home"
-          options={{headerShown: true, title: '', headerTransparent: true}}
+          options={{
+            headerShown: false,
+            title: 'Home',
+          }}
           component={HomeView}
         />
         <Stack.Screen
@@ -45,6 +49,13 @@ function AppNavigation() {
             headerBlurEffect: 'light',
           }}
           component={ConfirmationView}
+        />
+        <Stack.Screen
+          name="FeedbackView"
+          options={{
+            headerShown: false,
+          }}
+          component={FeedbackView}
         />
       </Stack.Navigator>
     </NavigationContainer>
