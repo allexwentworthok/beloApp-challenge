@@ -1,8 +1,8 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {View} from 'react-native';
 import {Card, Text} from 'react-native-paper';
 import {Icon} from '@rneui/themed';
-import {LIGTH_THEME} from '../../theme/colors';
+import {BaseCardStyles} from './Cards.style';
 
 const SwapCard = () => {
   return (
@@ -20,27 +20,5 @@ const SwapCard = () => {
     </Card>
   );
 };
-const BaseCardStyles = StyleSheet.create({
-  cardContainer: {
-    borderRadius: 14,
-    overflow: 'hidden',
-    borderColor: 'white',
-    shadowColor: LIGTH_THEME.shadowCards,
-    shadowOffset: {
-      width: 0,
-      height: 20,
-    },
-    shadowOpacity: 0.23,
-    shadowRadius: 2.62,
-    elevation: 4,
-  },
-  innerCard: {
-    justifyContent: 'space-between',
-    flexDirection: 'row',
-    padding: 12,
-  },
-  icon: {
-    fontWeight: '600',
-  },
-});
+
 export default SwapCard;

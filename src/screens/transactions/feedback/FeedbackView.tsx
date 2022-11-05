@@ -3,12 +3,11 @@ import React, {FunctionComponent} from 'react';
 import {View} from 'react-native';
 import {Text} from 'react-native-paper';
 import {BaseLayout, RoundedButton} from '../../../components';
+import {FEEDBACK_SUSCCESS} from '../../../Constants/TEXTS';
+import {PropsNavigation} from '../../../interfaces/interfaces';
 import {FeebackStyles} from './Feedback.style';
 
-interface Props {
-  navigation: any;
-}
-const FeedbackView: FunctionComponent<Props> = ({navigation}) => {
+const FeedbackView: FunctionComponent<PropsNavigation> = ({navigation}) => {
   return (
     <BaseLayout>
       <View style={FeebackStyles.container}>
@@ -20,7 +19,7 @@ const FeedbackView: FunctionComponent<Props> = ({navigation}) => {
           style={FeebackStyles.header}
         />
         <Text numberOfLines={2} style={FeebackStyles.titleConfirmation}>
-          Felicidades ya cambiaste tus monedas
+          {FEEDBACK_SUSCCESS}
         </Text>
         <RoundedButton
           title="Volver al inicio"
