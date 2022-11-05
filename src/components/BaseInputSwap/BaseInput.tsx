@@ -10,8 +10,7 @@ export default function BaseInputSwap() {
       <TextInput
         keyboardType="number-pad"
         autoFocus={true}
-        numberOfLines={0}
-        maxLength={5}
+        maxLength={6}
         placeholder="$0"
         style={SwapViewStyles.input}
       />
@@ -21,12 +20,15 @@ export default function BaseInputSwap() {
 const SwapViewStyles = StyleSheet.create({
   container: {
     marginTop: Dimensions.get('screen').height / 8,
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-between',
     flexDirection: 'row',
+    alignItems: 'center',
+    alignSelf: 'center',
   },
   input: {
     fontSize: 42,
-    fontWeight: '600',
+    fontWeight: '700',
     color: LIGTH_THEME.secondary,
+    marginHorizontal: '5%',
   },
 });

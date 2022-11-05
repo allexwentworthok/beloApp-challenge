@@ -11,9 +11,7 @@ const SwapCard = () => {
         <Card.Content style={BaseCardStyles.innerCard}>
           <Text>ArgyCoin</Text>
           <Icon
-            name="swap-horiz"
-            type="Ionicons"
-            iconStyle={BaseCardStyles.icon}
+            name="swap-horizontal-circle"
             onPress={() => console.log('Hola')}
           />
           <Text>Bitcoin</Text>
@@ -42,7 +40,7 @@ const BaseCardStyles = StyleSheet.create({
     padding: 12,
   },
   icon: {
-    fontFamily: 'Ionicons',
+    fontWeight: '600',
   },
 });
 export default SwapCard;

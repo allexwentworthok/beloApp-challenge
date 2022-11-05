@@ -1,16 +1,15 @@
 import React from 'react';
 import {StyleSheet} from 'react-native';
-import {Card, Title} from 'react-native-paper';
+import {List} from 'react-native-paper';
 import {LIGTH_THEME} from '../../theme/colors';
 
-const BaseCard = () => {
+const CardOfCoins = () => {
   return (
-    <Card style={BaseCardStyles.cardContainer}>
-      <Card.Title title="Card Title" subtitle="Card Subtitle" />
-      <Card.Content>
-        <Title>Card title</Title>
-      </Card.Content>
-    </Card>
+    <List.Item
+      title="Bitcoin"
+      style={BaseCardStyles.cardContainer}
+      description="Item description"
+    />
   );
 };
 const BaseCardStyles = StyleSheet.create({
@@ -29,4 +28,4 @@ const BaseCardStyles = StyleSheet.create({
     elevation: 4,
   },
 });
-export default BaseCard;
+export default CardOfCoins;

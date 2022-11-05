@@ -4,9 +4,9 @@ import {Text} from 'react-native-paper';
 import RoundedButton from './RoundedButton';
 
 const routerButtons = [
-  {title: 'Deposit', route: 'SwapView', key: 1},
-  {title: 'Swap', route: 'SwapView', key: 2},
-  {title: 'Checkout', route: 'SwapView', key: 3},
+  {title: 'Comprar', route: 'SwapView', key: 2},
+  {title: 'Ingresar', route: 'SwapView', key: 1},
+  {title: 'Retirar', route: 'SwapView', key: 3},
 ];
 
 const HeaderHome = ({navigation}: {navigation: any}) => {
@@ -43,7 +43,7 @@ const HeaderHomeStyles = StyleSheet.create({
   },
   buttons: {
     marginVertical: 18,
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-between',
     flexDirection: 'row',
   },
 });

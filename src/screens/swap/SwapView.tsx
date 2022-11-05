@@ -16,7 +16,7 @@ const SwapView: FunctionComponent<Props> = ({navigation}) => {
           <BaseInputSwap />
         </View>
         <SwapCard />
-        <View style={{marginTop: 36}}>
+        <View style={SwapViewStyles.buttons}>
           <RoundedButton
             action={() => navigation.navigate('Confirmation', {amount: 30})}
             title={'Convertir'}
@@ -32,5 +32,8 @@ const SwapViewStyles = StyleSheet.create({
   container: {
     marginTop: Dimensions.get('screen').height / 8,
     marginBottom: 40,
+  },
+  buttons: {
+    marginTop: 36,
   },
 });

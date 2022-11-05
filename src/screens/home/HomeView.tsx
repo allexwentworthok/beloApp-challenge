@@ -1,7 +1,7 @@
 import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import BaseLayout from '../../components/BaseLayout/BaseLayout';
-import BaseCard from '../../components/Card/BaseCard';
+import CardOfCoins from '../../components/Card/CardOfCoins';
 import HeaderHome from '../../components/HeaderHome/HeaderHome';
 
 const HomeView = () => {
@@ -9,7 +9,7 @@ const HomeView = () => {
   return (
     <BaseLayout>
       <HeaderHome navigation={navigation} />
-      <BaseCard />
+      <CardOfCoins />
     </BaseLayout>
   );
 };
