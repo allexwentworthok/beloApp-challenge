@@ -1,16 +1,29 @@
+import {Avatar} from '@rneui/base';
 import React, {FunctionComponent} from 'react';
 import {Dimensions, StyleSheet, View} from 'react-native';
 import {Text} from 'react-native-paper';
+import {useSelector} from 'react-redux';
+import {AppState} from '../../core/store';
 import {PropsNavigation} from '../../interfaces/interfaces';
+import {LIGTH_THEME} from '../../theme/colors';
 import RoundedButton from './RoundedButton';
 
-const routerButtons = [{title: 'Intercambiar', route: 'SwapView', key: 2}];
+const routerButtons = [
+  {title: 'Intercambiar', route: 'SwapView', key: 1},
+  {title: 'Depositar', route: 'SwapView', key: 2},
+];
 
 const HeaderHome: FunctionComponent<PropsNavigation> = ({navigation}) => {
+  const {cbu, balance, name, avatar} = useSelector(
+    (state: AppState) => state.balance?.defaultAccount,
+  );
+
   return (
     <View style={HeaderHomeStyles.container}>
-      <Text style={HeaderHomeStyles.textTitle}>$5.000,85</Text>
-      <Text style={HeaderHomeStyles.textSubtitle}>This month: $12,00</Text>
+      <Avatar size={48} rounded={true} source={{uri: avatar}} />
+      <Text style={HeaderHomeStyles.textName}>Hola {name}</Text>
+      <Text style={HeaderHomeStyles.textTitle}>${balance}</Text>
+      <Text style={HeaderHomeStyles.textSubtitle}>Tu IBAN {cbu}</Text>
       <View style={HeaderHomeStyles.buttons}>
         {routerButtons.map(x => (
           <RoundedButton
@@ -33,16 +46,21 @@ const HeaderHomeStyles = StyleSheet.create({
     padding: 12,
     borderRadius: 18,
   },
+  textName: {
+    fontSize: 22,
+    fontWeight: 'bold',
+  },
   textTitle: {
     fontSize: 32,
     fontWeight: 'bold',
+    color: LIGTH_THEME.titleInput,
   },
   textSubtitle: {
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: '300',
   },
   buttons: {
-    marginVertical: 18,
+    flexDirection: 'row',
     justifyContent: 'space-between',
   },
 });

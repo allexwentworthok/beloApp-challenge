@@ -10,7 +10,9 @@ import {
 
 const getBalance = async () => {
   try {
-    const response = await axios.get(`${ENV.URL_API}/`);
+    const response = await axios.get(
+      `${ENV.URL_MS_ACCOUNTS}/accounts/userAccount?id=11`,
+    );
     return response;
   } catch (error) {
     throw error;
@@ -20,7 +22,10 @@ const getBalance = async () => {
 function* balanceWorker() {
   try {
     const response: ResponseGenerator = yield call(getBalance);
-    yield put({type: GET_BALANCE_SUCCESS, payload: response.data});
+    yield put({
+      type: GET_BALANCE_SUCCESS,
+      payload: response.data[0],
+    });
   } catch {
     yield put({type: GET_BALANCE_FAILURE});
   }

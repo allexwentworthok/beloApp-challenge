@@ -1,21 +1,27 @@
 import React, {FunctionComponent} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {List} from 'react-native-paper';
+import {List, Text} from 'react-native-paper';
 import {useSelector} from 'react-redux';
-import {dataRedux, PropsNavigation} from '../../interfaces/interfaces';
+import {AppState} from '../../core/store';
+import {LIGTH_THEME} from '../../theme/colors';
 
-const CardOfCoins: FunctionComponent<PropsNavigation> = () => {
-  const coins = useSelector<dataRedux>(state => state.coins?.coins);
+const CardOfCoins: FunctionComponent = () => {
+  const coins = useSelector((state: AppState) => state.coins?.coins);
 
   return (
     <View style={BaseCardStyles.cardContainer}>
-      {coins.map((coin: any) => (
-        <List.Item
-          key={coin.key}
-          title={coin.name}
-          description={coin.price.usd}
-        />
-      ))}
+      <List.Section>
+        <List.Subheader>Monedas soportadas</List.Subheader>
+        {coins.map((coin: any) => (
+          <List.Item
+            key={coin.key}
+            title={coin.name}
+            right={() => (
+              <Text style={BaseCardStyles.price}>${coin.price.usd}</Text>
+            )}
+          />
+        ))}
+      </List.Section>
     </View>
   );
 };
@@ -25,6 +31,12 @@ const BaseCardStyles = StyleSheet.create({
     marginTop: 50,
     overflow: 'hidden',
     backgroundColor: 'white',
+  },
+  price: {
+    justifyContent: 'center',
+    color: LIGTH_THEME.titleInput,
+    fontSize: 14,
+    fontWeight: '600',
   },
 });
 export default CardOfCoins;

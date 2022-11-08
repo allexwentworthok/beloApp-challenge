@@ -11,4 +11,5 @@ const store = compose(applyMiddleware(sagaMiddleware))(createStore)(
 );
 sagaMiddleware.run(rootSaga);
 
+export type AppState = ReturnType<typeof store.getState>;
 export default store;

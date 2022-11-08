@@ -14,6 +14,7 @@ const RoundedButton: FunctionComponent<PropsButton> = ({action, title}) => {
 const styles = StyleSheet.create({
   roudedButton: {
     borderRadius: 6,
+    width: 150,
     marginVertical: 12,
   },
 });

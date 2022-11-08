@@ -1,7 +1,7 @@
 import * as types from '../actions/types';
 
 const initialStates = {
-  initialBalance: [],
+  defaultAccount: [],
   error: null,
   loadind: true,
 };
@@ -11,21 +11,21 @@ export default function balanceReducer(state = initialStates, action: any) {
     case types.GET_BALANCE:
       return {
         ...state,
-        initialBalance: [],
+        defaultAccount: [],
         error: null,
         loadind: true,
       };
     case types.GET_BALANCE_SUCCESS:
       return {
         ...state,
-        initialBalance: action.payload,
+        defaultAccount: action.payload,
         error: null,
         loadind: false,
       };
     case types.GET_BALANCE_FAILURE:
       return {
         ...state,
-        initialBalance: [],
+        defaultAccount: [],
         error: action.payload,
         loadind: false,
       };

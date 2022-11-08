@@ -4,6 +4,7 @@ import {useDispatch} from 'react-redux';
 import BaseLayout from '../../components/BaseLayout/BaseLayout';
 import CardOfCoins from '../../components/Card/CardOfCoins';
 import HeaderHome from '../../components/HeaderHome/HeaderHome';
+import {getBalance} from '../../core/actions/balanceAction';
 import {getCoins} from '../../core/actions/coinsAction';
 import {PropsNavigation} from '../../interfaces/interfaces';
 
@@ -13,6 +14,7 @@ const HomeView: FunctionComponent<PropsNavigation> = () => {
 
   useEffect(() => {
     distpatch(getCoins());
+    distpatch(getBalance());
   }, [distpatch]);
 
   return (
