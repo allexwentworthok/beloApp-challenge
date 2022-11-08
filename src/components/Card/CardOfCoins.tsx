@@ -1,14 +1,21 @@
-import React from 'react';
+import React, {FunctionComponent} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {List} from 'react-native-paper';
+import {useSelector} from 'react-redux';
+import {dataRedux, PropsNavigation} from '../../interfaces/interfaces';
 
-const CardOfCoins = () => {
+const CardOfCoins: FunctionComponent<PropsNavigation> = () => {
+  const coins = useSelector<dataRedux>(state => state.coins?.coins);
+
   return (
     <View style={BaseCardStyles.cardContainer}>
-      <List.Item title="Bitcoin" description="Item description" />
-      <List.Item title="Bitcoin" description="Item description" />
-      <List.Item title="Bitcoin" description="Item description" />
-      <List.Item title="Bitcoin" description="Item description" />
+      {coins.map((coin: any) => (
+        <List.Item
+          key={coin.key}
+          title={coin.name}
+          description={coin.price.usd}
+        />
+      ))}
     </View>
   );
 };

@@ -1,11 +1,12 @@
-import React from 'react';
+import React, {FunctionComponent} from 'react';
 import {Dimensions, StyleSheet, View} from 'react-native';
 import {Text} from 'react-native-paper';
+import {PropsNavigation} from '../../interfaces/interfaces';
 import RoundedButton from './RoundedButton';
 
 const routerButtons = [{title: 'Intercambiar', route: 'SwapView', key: 2}];
 
-const HeaderHome = ({navigation}: {navigation: any}) => {
+const HeaderHome: FunctionComponent<PropsNavigation> = ({navigation}) => {
   return (
     <View style={HeaderHomeStyles.container}>
       <Text style={HeaderHomeStyles.textTitle}>$5.000,85</Text>
