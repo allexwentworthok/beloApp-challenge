@@ -19,11 +19,13 @@ const HeaderHome: FunctionComponent<PropsNavigation> = ({navigation}) => {
   );
 
   return (
-    <View style={HeaderHomeStyles.container}>
-      <Avatar size={48} rounded={true} source={{uri: avatar}} />
-      <Text style={HeaderHomeStyles.textName}>Hola {name}</Text>
-      <Text style={HeaderHomeStyles.textTitle}>${balance}</Text>
-      <Text style={HeaderHomeStyles.textSubtitle}>Tu IBAN {cbu}</Text>
+    <>
+      <View style={HeaderHomeStyles.container}>
+        <Avatar size={48} rounded={true} source={{uri: avatar}} />
+        <Text style={HeaderHomeStyles.textName}>Hola {name}</Text>
+        <Text style={HeaderHomeStyles.textTitle}>${balance}</Text>
+        <Text style={HeaderHomeStyles.textSubtitle}>Tu IBAN {cbu}</Text>
+      </View>
       <View style={HeaderHomeStyles.buttons}>
         {routerButtons.map(x => (
           <RoundedButton
@@ -33,7 +35,7 @@ const HeaderHome: FunctionComponent<PropsNavigation> = ({navigation}) => {
           />
         ))}
       </View>
-    </View>
+    </>
   );
 };
 
@@ -42,22 +44,25 @@ export default HeaderHome;
 const HeaderHomeStyles = StyleSheet.create({
   container: {
     marginTop: Dimensions.get('screen').height / 8,
-    backgroundColor: 'white',
     padding: 12,
     borderRadius: 18,
+    backgroundColor: '#2300B0',
+    marginVertical: 12,
   },
   textName: {
     fontSize: 22,
     fontWeight: 'bold',
+    color: LIGTH_THEME.primary,
   },
   textTitle: {
     fontSize: 32,
     fontWeight: 'bold',
-    color: LIGTH_THEME.titleInput,
+    color: LIGTH_THEME.primary,
   },
   textSubtitle: {
     fontSize: 14,
     fontWeight: '300',
+    color: LIGTH_THEME.primary,
   },
   buttons: {
     flexDirection: 'row',

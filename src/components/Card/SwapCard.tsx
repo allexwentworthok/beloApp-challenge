@@ -9,7 +9,7 @@ const SwapCard = () => {
     <Card style={BaseCardStyles.cardContainer}>
       <View>
         <Card.Content style={BaseCardStyles.innerCard}>
-          <Text>ArgyCoin</Text>
+          <Text>Pesos</Text>
           <Icon
             name="swap-horizontal-circle"
             onPress={() => console.log('Hola')}
