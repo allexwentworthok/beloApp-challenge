@@ -10,9 +10,14 @@ import {SwapViewStyles} from './SwapView.style';
 
 const SwapView: FunctionComponent<PropsNavigation> = ({navigation}) => {
   const [amount, setAmount] = useState(0);
+  const [selectCoin, setSecondSelectedCoin] = useState({});
 
   const setAmountOfSwap = (numberAmount: string) => {
     setAmount(Number(numberAmount));
+  };
+
+  const secondCoin = (coin: any) => {
+    setSecondSelectedCoin(coin);
   };
 
   return (
@@ -31,10 +36,15 @@ const SwapView: FunctionComponent<PropsNavigation> = ({navigation}) => {
             />
           </View>
         </View>
-        <SwapCard />
+        <SwapCard secondCoin={secondCoin} />
         <View style={SwapViewStyles.buttons}>
           <RoundedButton
-            action={() => navigation.navigate('Confirmation', {amount: amount})}
+            action={() =>
+              navigation.navigate('Confirmation', {
+                amount: amount,
+                coinToSwap: selectCoin,
+              })
+            }
             title={'Convertir'}
           />
         </View>

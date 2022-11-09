@@ -12,9 +12,19 @@ const ConfirmationView: FunctionComponent<PropsNavigation> = ({
   route,
   navigation,
 }) => {
+  const {amount, coinToSwap} = route.params;
   const goTo = () => {
-    navigation.navigate('FeedbackView');
+    navigation.navigate('FeedbackView', {
+      amountPayed: amountToSwap(),
+      coinName: coinToSwap.name,
+    });
   };
+
+  const amountToSwap = () => {
+    const result = amount / coinToSwap.price.usd;
+    return result.toFixed(4);
+  };
+
   return (
     <BaseLayout>
       <View style={ConfirmationStyles.container}>
@@ -25,8 +35,8 @@ const ConfirmationView: FunctionComponent<PropsNavigation> = ({
           color={'green'}
           containerStyle={ConfirmationStyles.icon}
         />
-        <Text numberOfLines={2} style={ConfirmationStyles.titleConfirmation}>
-          {`${CONFIRMATION_TITLE} ${route.params.amount} USDT`}
+        <Text numberOfLines={3} style={ConfirmationStyles.titleConfirmation}>
+          {`${CONFIRMATION_TITLE} ${route.params.amount} USDT a $${route.params.coinToSwap.price.usd} cada moneda`}
         </Text>
         <RoundedButton title="Intercambiar" action={goTo} />
       </View>

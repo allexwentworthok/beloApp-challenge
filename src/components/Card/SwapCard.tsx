@@ -7,14 +7,18 @@ import {useSelector} from 'react-redux';
 import {AppState} from '../../core/store';
 import {BottomSheet} from '@rneui/base';
 
-const SwapCard = () => {
+export interface ChildProps {
+  secondCoin: (coin: object | undefined) => void;
+}
+const SwapCard = (props: ChildProps) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [selectSecondCoin, setSecondSelectedCoin] = useState('BITCOIN');
+  const [selectSecondCoin, setSecondSelectedCoin] = useState('Seleccionar');
 
   const coins = useSelector((state: AppState) => state.coins?.coins);
 
-  const secondCoin = (coin: any) => {
+  const secondCoinModal = (coin: any) => {
     setSecondSelectedCoin(coin.name);
+    props.secondCoin(coin);
     setIsVisible(false);
   };
 
@@ -39,7 +43,7 @@ const SwapCard = () => {
             <List.Item
               key={i}
               title={coin.name}
-              onPress={() => secondCoin(coin)}
+              onPress={() => secondCoinModal(coin)}
             />
           ))}
         </List.Section>

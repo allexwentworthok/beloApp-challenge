@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {LIGTH_THEME} from '../../../theme/colors';
 
 export const FeebackStyles = StyleSheet.create({
   container: {
@@ -13,12 +14,12 @@ export const FeebackStyles = StyleSheet.create({
 
   titleConfirmation: {
     marginVertical: '20%',
-    fontSize: 24,
+    fontSize: 18,
     color: '#1E3C00',
     textAlign: 'center',
   },
   header: {
-    backgroundColor: '#A7E541',
+    backgroundColor: LIGTH_THEME.feedbackColor,
     width: 150,
     height: 150,
     borderRadius: 100,

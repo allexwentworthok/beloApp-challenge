@@ -9,7 +9,7 @@ export const ConfirmationStyles = StyleSheet.create({
     alignItems: 'center',
   },
   titleConfirmation: {
-    fontSize: 22,
+    fontSize: 18,
     textAlign: 'center',
   },
   icon: {
