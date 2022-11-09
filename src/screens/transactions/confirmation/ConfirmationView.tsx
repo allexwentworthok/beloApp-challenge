@@ -12,7 +12,12 @@ const ConfirmationView: FunctionComponent<PropsNavigation> = ({
   route,
   navigation,
 }) => {
+  /* Destructuring the route.params object. */
   const {amount, coinToSwap} = route.params;
+  /**
+   * When the user clicks the button, navigate to the FeedbackView screen and pass the amountPayed and
+   * coinName as parameters.
+   */
   const goTo = () => {
     navigation.navigate('FeedbackView', {
       amountPayed: amountToSwap(),
@@ -20,6 +25,11 @@ const ConfirmationView: FunctionComponent<PropsNavigation> = ({
     });
   };
 
+  /**
+   * It takes the amount of money the user wants to spend and divides it by the price of the coin they
+   * want to buy
+   * @returns The amount of the coin to swap.
+   */
   const amountToSwap = () => {
     const result = amount / coinToSwap.price.usd;
     return result.toFixed(4);

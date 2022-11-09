@@ -12,6 +12,7 @@ const HomeView: FunctionComponent<PropsNavigation> = () => {
   const navigation = useNavigation();
   const distpatch = useDispatch();
 
+  /* A hook that is called after every render. */
   useEffect(() => {
     distpatch(getCoins());
     distpatch(getBalance());

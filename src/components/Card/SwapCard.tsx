@@ -11,11 +11,17 @@ export interface ChildProps {
   secondCoin: (coin: object | undefined) => void;
 }
 const SwapCard = (props: ChildProps) => {
+  /* A hook that allows us to use state in a functional component. */
   const [isVisible, setIsVisible] = useState(false);
   const [selectSecondCoin, setSecondSelectedCoin] = useState('Seleccionar');
 
   const coins = useSelector((state: AppState) => state.coins?.coins);
 
+  /**
+   * When the user clicks on a coin, the coin's name is set as the second selected coin, the coin is
+   * passed to the parent component, and the modal is closed.
+   * @param {any} coin - any - this is the coin that is selected from the list.
+   */
   const secondCoinModal = (coin: any) => {
     setSecondSelectedCoin(coin.name);
     props.secondCoin(coin);

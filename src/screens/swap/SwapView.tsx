@@ -12,10 +12,19 @@ const SwapView: FunctionComponent<PropsNavigation> = ({navigation}) => {
   const [amount, setAmount] = useState(0);
   const [selectCoin, setSecondSelectedCoin] = useState(null);
 
+  /**
+   * This function takes a string as an argument, converts it to a number, and sets the amount state to
+   * that number.
+   * @param {string} numberAmount - string - this is the amount of the swap that the user enters.
+   */
   const setAmountOfSwap = (numberAmount: string) => {
     setAmount(Number(numberAmount));
   };
 
+  /**
+   * The secondCoin function takes in a coin and sets the secondSelectedCoin state to that coin.
+   * @param {any} coin - any - this is the coin that is being passed in from the CoinList component.
+   */
   const secondCoin = (coin: any) => {
     setSecondSelectedCoin(coin);
   };

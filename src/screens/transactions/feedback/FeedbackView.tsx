@@ -13,6 +13,8 @@ const FeedbackView: FunctionComponent<PropsNavigation> = ({
   navigation,
 }) => {
   const {amountPayed, coinName} = route.params;
+
+  // FOR FAKE ERROR
   const [failState, setFailedState] = useState(false);
 
   useEffect(() => {

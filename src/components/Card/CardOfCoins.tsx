@@ -1,3 +1,4 @@
+/* A component that is using the `useSelector` hook to get the coins from the store. */
 import React, {FunctionComponent} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {List, Text} from 'react-native-paper';
@@ -7,7 +8,6 @@ import {LIGTH_THEME} from '../../theme/colors';
 
 const CardOfCoins: FunctionComponent = () => {
   const coins = useSelector((state: AppState) => state.coins?.coins);
-
   return (
     <View style={BaseCardStyles.cardContainer}>
       <List.Section>
@@ -25,6 +25,7 @@ const CardOfCoins: FunctionComponent = () => {
     </View>
   );
 };
+/* A constant that is creating a style sheet. */
 const BaseCardStyles = StyleSheet.create({
   cardContainer: {
     borderRadius: 14,

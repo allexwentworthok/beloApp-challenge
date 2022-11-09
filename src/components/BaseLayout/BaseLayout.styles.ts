@@ -1,3 +1,4 @@
+/* Creating a style sheet for the container. */
 import {Dimensions, StyleSheet} from 'react-native';
 
 export const baseLayoutStyles = StyleSheet.create({
