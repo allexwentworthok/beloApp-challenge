@@ -26,7 +26,7 @@ const ConfirmationView: FunctionComponent<PropsNavigation> = ({
           containerStyle={ConfirmationStyles.icon}
         />
         <Text numberOfLines={2} style={ConfirmationStyles.titleConfirmation}>
-          {`${CONFIRMATION_TITLE} ${route.params.amount} ARS`}
+          {`${CONFIRMATION_TITLE} ${route.params.amount} USDT`}
         </Text>
         <RoundedButton title="Intercambiar" action={goTo} />
       </View>

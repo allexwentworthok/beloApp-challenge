@@ -23,4 +23,10 @@ export const BaseCardStyles = StyleSheet.create({
   icon: {
     fontWeight: '600',
   },
+  bottonSheet: {
+    backgroundColor: 'white',
+    borderTopEndRadius: 16,
+    borderTopStartRadius: 16,
+    height: 300,
+  },
 });
