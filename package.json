@@ -21,7 +21,7 @@
     "@react-navigation/stack": "^6.2.1",
     "@reduxjs/toolkit": "^1.8.0",
     "@rescript/react": "^0.10.3",
-    "@rneui/base": "^4.0.0-rc.4",
+    "@rneui/base": "^4.0.0-rc.7",
     "@rneui/themed": "^4.0.0-rc.7",
     "@shopify/react-native-skia": "^0.1.157",
     "axios": "^0.26.1",
@@ -39,7 +39,7 @@
     "react-native-skia": "^0.0.1",
     "react-native-svg": "^12.3.0",
     "react-native-svg-transformer": "^1.0.0",
-    "react-native-vector-icons": "^9.1.0",
+    "react-native-vector-icons": "^10.0.0",
     "react-redux": "^8.0.5",
     "redux": "^4.2.0",
     "redux-saga": "^1.2.1"

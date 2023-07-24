@@ -11,7 +11,7 @@ import {
 const getBalance = async () => {
   try {
     const response = await axios.get(
-      `${ENV.URL_MS_ACCOUNTS}/accounts/userAccount?id=11`,
+      `${ENV.URL_MS_ACCOUNTS}/defaultAccount?id=11`,
     );
     return response;
   } catch (error) {

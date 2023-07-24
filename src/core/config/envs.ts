@@ -4,5 +4,5 @@ export const ENV = {
   test: false,
   COINS: ['Bitcoin', 'ethereum', 'ripple', 'tether', 'solana'],
   URL_API: 'https://api.coingecko.com/api/v3',
-  URL_MS_ACCOUNTS: 'https://63334234573c03ab0b5b1d6d.mockapi.io',
+  URL_MS_ACCOUNTS: 'https://64bed8765ee688b6250cfe8a.mockapi.io/api/v1',
 };

@@ -10,7 +10,7 @@ import RoundedButton from './RoundedButton';
 
 const routerButtons = [
   {title: 'Intercambiar', route: 'SwapView', key: 1},
-  {title: 'Depositar', route: 'SwapView', key: 2},
+  {title: 'Historial', route: 'SwapView', key: 2},
 ];
 
 const HeaderHome: FunctionComponent<PropsNavigation> = ({navigation}) => {
@@ -21,7 +21,9 @@ const HeaderHome: FunctionComponent<PropsNavigation> = ({navigation}) => {
   return (
     <>
       <View style={HeaderHomeStyles.container}>
-        <Avatar size={48} rounded={true} source={{uri: avatar}} />
+        <View style={HeaderHomeStyles.avatar}>
+          <Avatar size={96} rounded={true} source={{uri: avatar}} />
+        </View>
         <Text style={HeaderHomeStyles.textName}>Hola {name}</Text>
         <Text style={HeaderHomeStyles.textTitle}>${balance}</Text>
         <Text style={HeaderHomeStyles.textSubtitle}>Tu IBAN {cbu}</Text>
@@ -46,8 +48,13 @@ const HeaderHomeStyles = StyleSheet.create({
     marginTop: Dimensions.get('screen').height / 8,
     padding: 12,
     borderRadius: 18,
-    backgroundColor: '#2300B0',
+    backgroundColor: '#940CFE',
     marginVertical: 12,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  avatar: {
+    marginTop: -48,
   },
   textName: {
     fontSize: 22,

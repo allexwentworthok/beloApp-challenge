@@ -12,6 +12,7 @@ export type RootStackParamList = {
   SwapView: {name: string};
   Confirmation: {name: String};
   FeedbackView: {name: String};
+  HistorialView: {name: String};
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
