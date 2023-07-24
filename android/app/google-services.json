@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "902460845747",
+    "project_id": "challenge-2e9cf",
+    "storage_bucket": "challenge-2e9cf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:902460845747:android:758ccdab4ea1d5f6998ac6",
+        "android_client_info": {
+          "package_name": "com.beloapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "902460845747-fftfma9koeuitldu9egi4038pnia4cpi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQN50JaT6Wt766tsrVXfYsVP5xmCJcnl0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "902460845747-fftfma9koeuitldu9egi4038pnia4cpi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
